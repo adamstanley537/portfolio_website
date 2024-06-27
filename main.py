@@ -65,9 +65,9 @@ def home():
 @app.route("/<category>")
 def elements(category):
     global key, posts
-    p = Path.cwd() / "static" / "images" / "travel"
-    photos = [file_path._str.replace("/Users/adam/Portfolio/Website/portfolio website","") for file_path in p.iterdir() if file_path._str != "/Users/adam/Portfolio/Website/portfolio website/static/images/travel/.DS_Store"]
-    return render_template(f"elements/{category}.html", key=key, category=category, posts=posts, photos=photos)
+    # p = Path.cwd() / "static" / "images" / "travel"
+    # photos = [file_path._str.replace("/Users/adam/Portfolio/Website/portfolio website","") for file_path in p.iterdir() if file_path._str != "/Users/adam/Portfolio/Website/portfolio website/static/images/travel/.DS_Store"]
+    return render_template(f"elements/{category}.html", key=key, category=category, posts=posts)# photos=photos)
 
 
 @app.route("/<category>/<post>")
