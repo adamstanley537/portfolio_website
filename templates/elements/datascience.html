@@ -1,0 +1,33 @@
+{% extends "elements_base.html" %} {% block content %}
+				<!-- Main -->
+			<div id="main">
+				<section class="post">
+					<header class="major">
+						<h1>Data Science<br />
+							Work</h1>
+						<p>This page details the work I've done as a data scientist.</p>
+
+				</section>
+							</header>
+				<!-- Posts -->
+				<section class="posts">
+					{% for post in posts %}
+					{% if post["element"] == category :%}
+
+								<article>
+									<header>
+										<span class="date">{{ post["date"] }}</span>
+										<h2><a href="{{ url_for('post', category=post['element'], post=post['html']) }}">{{ post["title"] }}</a></h2>
+									</header>
+									<a href="{{ url_for('post', category=post['element'], post=post['html']) }}" class="image fit"><img src="{{ post['image'] }}" alt="" /></a>
+									<p>{{ post["description"] }}</p>
+									<ul class="actions special">
+										<li><a href="{{ url_for('post', category=post['element'], post=post['html']) }}" class="button">Full Story</a></li>
+									</ul>
+								</article>
+
+							{% endif %}
+							{% endfor %}
+							</section>
+
+{% endblock %}

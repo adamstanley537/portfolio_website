@@ -1,0 +1,46 @@
+{% extends "elements_base.html" %} {% block content %}
+				<!-- Main -->
+			<div id="main">
+				<section class="post">
+					<header class="major">
+						<h1>About<br />
+							Me</h1>
+						<p>Here's a little on what I've been up to for the last few years</p>
+					</header>
+
+					<div class="image main" style="width: 270px; margin: auto;"><img src="static/images/me.png" alt="" width="270" height="270"/></div><br/>
+					<p>Hi there, I am Adam. Welcome to my website! I am a data scientist living in Cambodia with my partner, where we recently relocated after taking some time off to travel. I studied Maths at the University of Bristol and then spent 4 years working as an Actuary in London, where I qualified as a fellow of the Institute and Faculty of Actuaries. In my later years working, I started switching my focus from actuarial specific data science to more general data science, as I volunteered for the Machine Learning in Reserving working party (see my page on the under the actuarial tab).<br/></p>
+					<p>In the meantime, I concentrated on my coding skills in Python and SQL to enhance my use of data analytics and machine learning models. I have been steadily building my portfolio, all of which is displayed on this website. I am focussing on my interests, namely machine learning and data viz, and if possible doing so with an environmental twist.<br/></p>
+					<p>Outside of work, I am passionate about the outdoors. My favourite activities include trail running/hiking, skiing, diving and anything that involves the sea. While in Cambodia I am hoping to run a 100km ultra marathon around the temples of Angkor Wat, learn to kitesurf in Kampot and to continue exploring all that South East Asia has to offer.<br/></p>
+					<p>Here is a summary of the travels over the last year!</p>
+					<div style="display: block; margin-left: auto; margin-right: auto; width: 80%; height: 600px;" id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+						  <img style="max-height: 600px;  margin-left: auto; margin-right: auto;" src="/static/images/IMG_0797.jpeg" class="d-block h-100" alt="...">
+						</div>
+						{% for photo in photos %}
+						<div class="carousel-item">
+						  <img style="max-height: 600px;  margin-left: auto; margin-right: auto;" src="{{ photo }}" class="d-block h-100" alt="...">
+						</div>
+						{% endfor %}
+					  </div>
+
+					  <button style="margin-top: 280px;" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					  </button>
+					  <button style="margin-top: 280px;" class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					  </button>
+					</div>
+								<br/>	<br/>	<br/>
+					<div style="margin-left: auto; margin-right: auto; width: 80%; ">
+					<iframe width="640" height="480" src="https://www.polarsteps.com/AdamStanley/9362973-malaysia-indonesia/embed"></iframe>
+					<iframe width="640" height="480" src="https://www.polarsteps.com/AdamStanley/9472758-travels-part-2/embed"></iframe>
+						<iframe width="640" height="480" src="https://www.polarsteps.com/AdamStanley/10249247-cambodia/embed"></iframe>
+					</div>
+				</section>
+			</div>
+{% endblock %}

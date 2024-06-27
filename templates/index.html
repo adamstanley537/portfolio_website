@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Home</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='assets/css/main.css') }}" />
+		<link rel="icon" href="/static/images/letter-a.png">
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+				<!-- Intro -->
+					<div id="intro">
+						<h1>My Portfolio<br />
+						Website</h1>
+						<p>I'm building this website as a challenge, a bit of fun and as a record of what I've made to date.</p>
+						<ul class="actions">
+							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>
+
+				<!-- Header -->
+					<header id="header">
+						<a href="{{ url_for('home') }}" class="logo">Portfolio</a>
+					</header>
+
+				{% include "nav.html" %}
+
+				<!-- Main -->
+					<div id="main">
+						<section class="">
+							<h2>My Portfolio</h2>
+							<p><em>This wesbite is a demonstration of the the data science and actuarial projects I have undertaken to date.</em></p>
+							<p>I am a fully qualified Actuary and budding data scientist. I am my interests in these fields span a wide range of topics with an emphasis on having positive impact. At the moment I am focussing on building my own machine learning models in Python.</p>
+							<p>See below my various articles, and please let me know what you think in the contact form below!</p>
+						</section>
+
+						<!-- Posts -->
+							<section class="posts">
+
+							{% for post in posts %}
+
+								<article>
+									<header>
+										<span class="date">{{ post["date"] }}</span>
+										<h2><a href="{{ url_for('post', category=post['element'], post=post['html']) }}">{{ post["title"] }}</a></h2>
+									</header>
+									<a href="{{ url_for('post', category=post['element'], post=post['html']) }}" class="image fit"><img src="{{ post['image'] }}" alt="" /></a>
+									<p>{{ post["description"] }}</p>
+									<ul class="actions special">
+										<li><a href="{{ url_for('post', category=post['element'], post=post['html']) }}" class="button">Full Story</a></li>
+									</ul>
+								</article>
+
+							{% endfor %}
+
+							</section>
+
+
+					</div>
+
+{% include "footer.html" %}
