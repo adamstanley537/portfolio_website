@@ -1,9 +1,9 @@
 from flask import Flask, render_template, url_for, request, redirect
-# import requests
 import smtplib
+import os
 from pathlib import Path
 
-PASSWORD = "nqdfkbpzropfiokv"
+PASSWORD = os.environ.get("PWORD", "Key does not exist")
 
 app = Flask(__name__)
 
@@ -88,8 +88,6 @@ def send_email(name, email, message):
         connection.starttls()
         connection.login("adamstanley537@gmail.com", PASSWORD)
         connection.sendmail("adamstanley537@gmail.com", "adamstanley537@gmail.com", email_message)
-
-
 
 
 if __name__ == "__main__":
