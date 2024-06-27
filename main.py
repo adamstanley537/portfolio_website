@@ -4,6 +4,7 @@ import os
 from pathlib import Path
 
 PASSWORD = os.environ.get("PWORD", "Key does not exist")
+EMAIL = os.environ.get("EMAIL", "Key does not exist")
 
 app = Flask(__name__)
 
@@ -86,11 +87,11 @@ def send_email(name, email, message):
     email_message = f"Subject:New Message from portfolio\n\nName: {name}\nEmail: {email}\nMessage: {message}"
     with smtplib.SMTP("smtp.gmail.com", 587) as connection:
         connection.starttls()
-        connection.login("adamstanley537@gmail.com", PASSWORD)
-        connection.sendmail("adamstanley537@gmail.com", "adamstanley537@gmail.com", email_message)
+        connection.login(EMAIL, PASSWORD)
+        connection.sendmail(EMAIL, EMAIL, email_message)
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
 
 
