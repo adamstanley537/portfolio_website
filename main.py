@@ -34,10 +34,18 @@ posts = [
     },
     {
         "element": "datascience",
+        "title": "Build Your Own - Naive Bayes Classifier",
+        "description": "Here is my attempt at building a generative classification model from scratch in Python.",
+        "image": "/static/images/naive_bayes.png",
+        "date": "Jul 3, 2024",
+        "html": "naive_bayes",
+    },
+    {
+        "element": "datascience",
         "title": "Build Your Own - Linear Regression",
         "description": "Here is my attempt at building a linear regression model from scratch in Python.",
         "image": "/static/images/lin_reg.png",
-        "date": "June 1, 2023",
+        "date": "June 1, 2024",
         "html": "linear_regression",
     },
     {
@@ -45,7 +53,7 @@ posts = [
         "title": "Build Your Own - Logistic Regression",
         "description": "Here is my attempt at building a logistic regression model from scratch in Python.",
         "image": "/static/images/log_reg.png",
-        "date": "June 25, 2023",
+        "date": "June 25, 2024",
         "html": "logistic_regression",
     },
 ]
