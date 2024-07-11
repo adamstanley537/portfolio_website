@@ -56,6 +56,14 @@ posts = [
         "date": "June 25, 2024",
         "html": "logistic_regression",
     },
+    {
+        "element": "datascience",
+        "title": "Build Your Own - K Nearest Neighbours",
+        "description": "Here is my attempt at building a K Nearest Neighbours model from scratch in Python.",
+        "image": "/static/images/knn.png",
+        "date": "July 11, 2024",
+        "html": "knn",
+    },
 ]
 
 # @app.route("/home")
