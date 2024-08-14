@@ -18,6 +18,14 @@ key = {
 posts = [
     {
         "element": "datascience",
+        "title": "Taylor Swift Over Time",
+        "description": "Using Spotify's API I have created a dashboard showing the evolution of audio features throughout Taylor Swift's albums.",
+        "image": "/static/images/taytay.jpeg",
+        "date": "August 14, 2024",
+        "html": "taytay",
+    },
+    {
+        "element": "datascience",
         "title": "River Pollution Investigation",
         "description": "I have put together a detailed breakdown of the Ocean Clean-Ups study into riverine plastic pollution.",
         "image": "/static/images/TheOceanCleanup.jpg",
