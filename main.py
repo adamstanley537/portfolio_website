@@ -24,6 +24,14 @@ posts = [
         "date": "August 14, 2024",
         "html": "taytay",
     },
+{
+        "element": "datascience",
+        "title": "Build Your Own - Decision Tree",
+        "description": "Here is my attempt at building a decision tree model from scratch in Python.",
+        "image": "/static/images/tree.png",
+        "date": "Aug 21, 2024",
+        "html": "decision_tree",
+    },
     {
         "element": "datascience",
         "title": "River Pollution Investigation",
@@ -117,6 +125,6 @@ def send_email(name, email, message):
 
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=False, port=3000)
 
 
