@@ -18,13 +18,21 @@ key = {
 posts = [
     {
         "element": "datascience",
+        "title": "Build Your Own - Neural Network",
+        "description": "Here is my attempt at building a neural network from scratch in Python.",
+        "image": "/static/images/nn3.avif",
+        "date": "Sep 16, 2024",
+        "html": "nn",
+    },
+    {
+        "element": "datascience",
         "title": "Taylor Swift Over Time",
         "description": "Using Spotify's API I have created a dashboard showing the evolution of audio features throughout Taylor Swift's albums.",
         "image": "/static/images/taytay.jpeg",
         "date": "August 14, 2024",
         "html": "taytay",
     },
-{
+    {
         "element": "datascience",
         "title": "Build Your Own - Decision Tree",
         "description": "Here is my attempt at building a decision tree model from scratch in Python.",
