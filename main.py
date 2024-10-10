@@ -18,6 +18,14 @@ key = {
 posts = [
     {
         "element": "datascience",
+        "title": "Pokedex CNN Classifier",
+        "description": "Gotta Classify Them All!.",
+        "image": "/static/images/pokemonbig.jpeg",
+        "date": "Oct 10, 2024",
+        "html": "Pokedex_html",
+    },
+    {
+        "element": "datascience",
         "title": "Build Your Own - Neural Network",
         "description": "Here is my attempt at building a neural network from scratch in Python.",
         "image": "/static/images/nn3.avif",
